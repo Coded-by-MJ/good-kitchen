@@ -26,7 +26,7 @@ const SearchForm = () => {
   return (
     <form onSubmit={onSubmit}
     
-    className="w-[250px] relative group cursor-pointer transition-all hover:ring-offset-1 hover:ring-darkBrown hover:ring-2 h-12 p-2  focus-within::ring-offset-1 focus-within::ring-darkBrown focus-within::ring-2 flex justify-between items-center bg-transparent  border-[1px] rounded-md border-darkBrown">
+    className="w-[250px] relative group cursor-pointer transition-all  p-2  flex justify-between items-center bg-transparent  border-[1px] rounded-md border-darkBrown">
         <input type="text"
          id="search-meal"
          name="search-meal"

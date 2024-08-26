@@ -41,7 +41,7 @@ const Inquires = () => {
 
 
   return (
-    <div className="my-20 w-full p-6 bg-white rounded-xl max-w-[1000px] mx-auto flex justify-center items-center flex-col gap-4">
+    <div className="my-20 w-full p-6 bg-white rounded-xl max-w-[850px] mx-auto flex justify-center items-center flex-col gap-4">
 
         <div className="w-full flex flex-wrap justify-center md:justify-between items-center">
                   <img src="/chef.png" alt="chef" className="size-[350px] flex-shrink-0 object-cover"/>
