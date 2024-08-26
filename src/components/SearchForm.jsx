@@ -37,7 +37,7 @@ const SearchForm = () => {
         />
         <label htmlFor="search-meal"
           className="text-[12px] z-10 bg-white left-0 top-0 translate-x-[8px] -translate-y-[9px] peer-placeholder-shown:bg-transparent peer-placeholder-shown:text-sm peer-placeholder-shown:translate-y-[13px] text-darkBrown absolute   transition-all"
-         >Search for any meal</label>
+         >Search for any recipe</label>
 
         <button type="submit" className="h-full w-8 flex items-center justify-center bg-transparent cursor-pointer">
            <CiSearch className="text-md size-full text-darkBrown hover:text-darkGold" />

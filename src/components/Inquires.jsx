@@ -47,7 +47,7 @@ const Inquires = () => {
                   <img src="/chef.png" alt="chef" className="size-[350px] flex-shrink-0 object-cover"/>
 
                   <div className="flex flex-col gap-2 w-full md:w-[350px]">
-                       <h1 className="text-3xl  text-darkGold tracking-wide">Can&apos;t decide on what to eat?</h1>
+                       <h1 className="text-3xl  text-darkGold">Can&apos;t decide on what to eat?</h1>
                        <p className="text-md italic mb-4 text-darkBrown">Good Kitchen&apos;s got your back! Search or select delicious meal recipes from our extensive catalog. </p>
                         <button className="h-10 cursor-pointer w-28  p-2 bg-darkBrown rounded-md text-sm text-white
                                  hover:bg-darkGold hover:text-black transition-all flex items-center justify-center"
