@@ -1,32 +1,30 @@
 import Card from "../components/Card";
-import { useQuery } from "@tanstack/react-query";
+import { useIsFetching } from "@tanstack/react-query";
+import { useLoaderData, useSearch } from "@tanstack/react-router";
 import SkeletonLoader from "../components/SkeletonLoader";
-import { getSearchMeal } from "../../api/getSearchMeal";
 
-const SearchPage = ({ queryParams }) => {
-  const { data, status } = useQuery({
-    queryKey: ["search", queryParams],
-    queryFn: () => getSearchMeal(queryParams),
-    retry: 2,
-  });
+const SearchPage = () => {
+  const isFetching = useIsFetching({ queryKey: ["meals"] });
+  const data = useLoaderData({ from: "/" });
+  const params = useSearch({ from: "/" });
 
-  if (status === "pending") {
+  if (isFetching) {
     return <SkeletonLoader />;
   }
 
-  if (status === "error") {
+  if (!data?.meals && !isFetching) {
     return (
       <h1 className="text-3xl text-darkBrown bg-white">
-        No Search Results for {`'${queryParams}'`}
+        No Search Results for {`'${params.search}'`}
       </h1>
     );
   }
 
   return (
     <section className="mt-20 w-full p-6 bg-white rounded-t-xl flex justify-start items-start flex-col gap-8">
-      <h1 className="text-2xl text-darkBrown capitalize">{queryParams}</h1>
+      <h1 className="text-2xl text-darkBrown capitalize">{data?.mealType}</h1>
       <div className="grid grid-cols-auto-fill w-full gap-8 items-start ">
-        {data.map((meal) => (
+        {data?.meals.map((meal) => (
           <Card key={meal.id} {...meal} />
         ))}
       </div>
